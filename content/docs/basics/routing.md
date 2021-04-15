@@ -14,12 +14,10 @@ toc: true
 ---
 
 Routing is performed using well known [gorilla/mux](https://github.com/gorilla/mux) package.
-For more info on how to use the Gorilla router please [visit official docs](https://github.com/gorilla/mux).
+For more info on how to use the Gorilla router please [visit the official docs](https://github.com/gorilla/mux).
 
 ## Action handlers
 For every route you should create a corresponding action handler.
-
-### Example
 
 ```
 package main
@@ -48,10 +46,8 @@ func handlerHome(app gotuna.App) http.Handler {
 }
 ```
 
-## Grouping routes and middlewares
+## Grouping routes
 You can group several routes that share the same functionality. This is called "subrouting".
-
-### Example
 
 
 ```

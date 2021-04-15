@@ -20,9 +20,8 @@ All middlewares have the common gorilla signature `mux.MiddlewareFunc`
 
 ## Attaching middlewares
 
-Middlewares can be added to a router using ```app.Router.Use()```
+Middlewares are attached to routes using ```app.Router.Use()```
 
-### Example
 ```
 app.Router = mux.NewRouter()
 
@@ -32,7 +31,8 @@ app.Router.Use(myCustomMiddleware())
 ```
 
 ## Built-in middlewares
-The framework comes with the several built-in middlewares:
+The framework comes with several built-in middlewares:
+
 - Authenticate
 - RedirectIfAuthenticated
 - Cors
