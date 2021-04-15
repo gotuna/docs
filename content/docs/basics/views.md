@@ -102,7 +102,7 @@ app.ViewHelpers = []gotuna.ViewHelperFunc{
 }
 ```
 
-## Build-in helpers
+## Built-in helpers
 The framework comes with several built-in helpers:
 
 - t (translate)
