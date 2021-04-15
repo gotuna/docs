@@ -83,5 +83,6 @@ app.Router.PathPrefix(app.StaticPrefix).
 ```
 
 Static files are passed into the app's configuration using 
-the `io/fs` package's `FS` interface. This means that you can use `embed` to 
+the `io/fs` package's `FS` interface. 
+This means that you can use both `os.DirFS` or `go:embed` to 
 pack all your static files directly into the final binary.
