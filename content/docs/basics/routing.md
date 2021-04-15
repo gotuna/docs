@@ -77,8 +77,10 @@ configured under `app.Static` with optional prefix `app.StaticPrefix`.
 You must also provide a handler to be used when the file is not found (404 page).
 
 ```
+app.Static = os.DirFS("./static")
+
 app.Router.PathPrefix(app.StaticPrefix).
-	Handler(http.StripPrefix(app.StaticPrefix, app.ServeFiles(handlerNotFound(app)))).
+	Handler(http.StripPrefix(app.StaticPrefix, app.ServeFiles(http.NotFoundHandler()))).
 	Methods(http.MethodGet)
 ```
 
