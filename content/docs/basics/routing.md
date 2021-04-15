@@ -74,7 +74,7 @@ auth.Handle("/login", handlerLogin(app)).Methods(http.MethodGet, http.MethodPost
 A special handler is provided by the framework to serve your static files 
 configured under `app.Static` with optional prefix `app.StaticPrefix`.
 
-You can also provide a custom handler to be used when the file is not found (404 page).
+You can provide a custom handler to be used when the file is not found (404 page).
 
 ```
 app.Static = os.DirFS("./static")
