@@ -76,12 +76,12 @@ configured under `app.Static` with optional prefix `app.StaticPrefix`.
 
 You must also provide a handler to be used when the file is not found (404 page).
 
-Static files are passed into the app's configuration using 
-the `io/fs` package's `FS` interface. This means that you can use `embed` to 
-pack all your static files directly into the final binary.
-
 ```
 app.Router.PathPrefix(app.StaticPrefix).
 	Handler(http.StripPrefix(app.StaticPrefix, app.ServeFiles(handlerNotFound(app)))).
 	Methods(http.MethodGet)
 ```
+
+Static files are passed into the app's configuration using 
+the `io/fs` package's `FS` interface. This means that you can use `embed` to 
+pack all your static files directly into the final binary.
