@@ -1,4 +1,6 @@
 # redirects for Netlify - https://www.netlify.com/docs/redirects/
+http://gotuna.org/* https://gotuna.org/:splat 301!
+https://gotuna.org/* https://www.gotuna.org/:splat 301!
 {{- range $p := .Site.Pages -}}
 {{- range .Aliases }}
 {{ . }} {{ $p.RelRelPermalink -}}
