@@ -106,6 +106,7 @@ app.ViewHelpers = []gotuna.ViewHelperFunc{
 The framework comes with several built-in helpers:
 
 - t (translate)
+- tp (translate plural)
 - request (current http.Request object)
 - static (get static file with prefix)
 - currentUser (current User object)
@@ -115,9 +116,9 @@ The framework comes with several built-in helpers:
 ## Template files
 Template files are passed into the app's configuration using the `io/fs` package's `FS` interface.
 
-This means that you can use embed to embed all template files directly into the final binary.
+This means that you can use `embed` to pack all your template files directly into the final binary.
 
-Please see this simplified example showing the structure of an app:
+Please see this simplified example showing the structure of an app with embeded views:
 
 
 ```

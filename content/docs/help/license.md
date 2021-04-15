@@ -10,7 +10,7 @@ menu:
   docs:
     parent: "help"
 weight: 710
-toc: false
+toc: true
 ---
 
 ## MIT License

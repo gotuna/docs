@@ -10,7 +10,7 @@ menu:
   docs:
     parent: "prologue"
 weight: 130
-toc: false
+toc: true
 ---
 
 GoTuna comes with few working examples.

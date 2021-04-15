@@ -10,7 +10,7 @@ menu:
   docs:
     parent: "help"
 weight: 620
-toc: false
+toc: true
 ---
 
 {{< alert icon="💡" text="Any violations of the code of conduct may be reported to Milos Stojanovic (alcalbg@gmail.com)" >}}

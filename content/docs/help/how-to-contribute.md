@@ -10,7 +10,7 @@ menu:
   docs:
     parent: "help"
 weight: 610
-toc: false
+toc: true
 ---
 
 ## Before you start
