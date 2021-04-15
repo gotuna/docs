@@ -1,26 +1,26 @@
 # Meta Data for SEO
 
 ## Homepage
-title = "Doks"
+title = "GoTuna"
 titleSeparator = "-"
-titleAddition = "Modern Documentation Theme"
-description = "Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."
+titleAddition = "Progressive web framework written in Go"
+description = "GoTuna - progressive web framework written in Go"
 
 ## Open Graph + Twitter Cards
-images = ["doks.png"]
-twitterSite = "henkverlinde"
-twitterCreator = "henkverlinde"
-facebookAuthor = "verlinde.henk"
-facebookPublisher = "verlinde.henk"
+images = ["gotuna-card.jpeg"]
+#twitterSite = "henkverlinde"
+#twitterCreator = "henkverlinde"
+#facebookAuthor = "verlinde.henk"
+#facebookPublisher = "verlinde.henk"
 ogLocale = "en_US"
 
 ## JSON-LD
-schemaType = "Organization"
-schemaLogo = "logo-doks.png"
-schemaTwitter = "https://twitter.com/henkverlinde"
-schemaLinkedIn = "https://www.linkedin.com/in/henkverlinde/"
-schemaGitHub = "https://github.com/h-enk"
-schemaSection = "blog"
+schemaType = "GoTuna"
+schemaLogo = "logo-gotuna.png"
+#schemaTwitter = "https://twitter.com/henkverlinde"
+#schemaLinkedIn = "https://www.linkedin.com/in/henkverlinde/"
+#schemaGitHub = "https://github.com/h-enk"
+#schemaSection = "blog"
 
 ## Sitelinks Search Box
 siteLinksSearchBox = false
@@ -43,8 +43,8 @@ alert = false
 alertText = "Like Doks? <a class=\"alert-link\" href=\"https://github.com/h-enk/doks/stargazers\">Star on GitHub</a>. Thanks!</a>"
 
 # Edit Page
-docsRepo = "https://github.com/h-enk/doks"
-editPage = false
+docsRepo = "https://github.com/gotuna/docs"
+editPage = true
 
 [options]
   lazySizes = true

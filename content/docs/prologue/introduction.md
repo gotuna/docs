@@ -1,7 +1,7 @@
 ---
 title: "Introduction"
-description: "Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."
-lead: "Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."
+description: "GoTuna - progressive web framework written in go"
+lead: ""
 date: 2020-10-06T08:48:57+00:00
 lastmod: 2020-10-06T08:48:57+00:00
 draft: false
@@ -13,46 +13,35 @@ weight: 100
 toc: true
 ---
 
-## Get started
+{{< alert icon="💡" text="This project is still under heavy development and is not ready for production use." >}}
 
-There are two main ways to get started with Doks:
+## Main Features
+- Router (gorilla)
+- Standard `http.Handler` interface
+- Middleware support
+- User session managment (gorilla)
+- Session flash messages
+- Native view rendering (html/template) with helpers
+- Static file server included with configurable prefix
+- Standard logger interface
+- Request logging and panic recovery
+- Full support for embedded templates and static files
+- User authentication (via user provider interface)
+- Sample InMemory user provider included
+- Multi-language support
+- Database agnostic
 
-### Tutorial
+## Requirements
+- Make sure you have Go >= 1.16 installed
 
-{{< alert icon="👉" text="The Tutorial is intended for novice to intermediate users." >}}
+## Testing
+```
+go test -race -v ./...
+```
 
-Step-by-step instructions on how to start a new Doks project. [Tutorial →](https://getdoks.org/tutorial/introduction/)
-
-### Quick Start
-
-{{< alert icon="👉" text="The Quick Start is intended for intermediate to advanced users." >}}
-
-One page summary of how to start a new Doks project. [Quick Start →]({{< relref "quick-start" >}})
-
-## Go further
-
-Recipes, Reference Guides, Extensions, and Showcase.
-
-### Recipes
-
-Get instructions on how to accomplish common tasks with Doks. [Recipes →](https://getdoks.org/docs/recipes/project-configuration/)
-
-### Reference Guides
-
-Learn how to customize Doks to fully make it your own. [Reference Guides →](https://getdoks.org/docs/reference-guides/security/)
-
-### Extensions
-
-Get instructions on how to add even more to Doks. [Extensions →](https://getdoks.org/docs/extensions/breadcrumb-navigation/)
-
-### Showcase
-
-See what others have build with Doks. [Showcase →](https://getdoks.org/showcase/electric-blocks/)
+## External dependencies
+External modules are mostly used when the feature is too complex to build or maintain - Router, Secure cookies
 
 ## Contributing
 
-Find out how to contribute to Doks. [Contributing →](https://getdoks.org/docs/contributing/how-to-contribute/)
-
-## Help
-
-Get help on Doks. [Help →]({{< relref "how-to-update" >}})
+Find out how to contribute to this project. [Contributing →]({{< relref "how-to-contribute" >}})

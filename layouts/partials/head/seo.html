@@ -39,12 +39,17 @@
 <meta name="twitter:creator" content="@{{ .Site.Params.twitterCreator }}">
 
 {{ partial "head/opengraph.html" . }}
+
+{{/*
 <meta property="article:publisher" content="https://www.facebook.com/{{ .Site.Params.facebookPublisher }}">
 <meta property="article:author" content="https://www.facebook.com/{{ .Site.Params.facebookAuthor }}">
 <meta property="og:locale" content="{{ .Site.Params.ogLocale }}">
+*/}}
 
 {{ range .AlternativeOutputFormats -}}
   <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .RelPermalink | safeURL }}">
 {{ end -}}
 
+{{/*
 {{ partial "head/structured-data.html" . }}
+*/}}

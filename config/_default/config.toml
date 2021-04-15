@@ -70,11 +70,11 @@ rel  = "sitemap"
   filename = "sitemap.xml"
   priority = 0.5
 
-[taxonomies]
-  contributor = "contributors"
+# [taxonomies]
+#  contributor = "contributors"
 
-[RelPermalinks]
-  blog = "/blog/:title/"
+# [RelPermalinks]
+#   blog = "/blog/:title/"
 
 [module]
   [[module.mounts]]
