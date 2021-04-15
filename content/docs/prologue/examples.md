@@ -15,13 +15,18 @@ toc: true
 
 GoTuna comes with few working examples.
 
+{{< alert icon="💡" text="Make sure you have Go >= 1.16 installed." >}}
 
-## Running examples
+## Running example apps
+
+
 ```
 git clone https://github.com/gotuna/gotuna.git
 cd gotuna
 go run examples/fullapp/cmd/main.go
 ```
+
+Once the app is compiles, visit <a target="_blank" href="http://localhost:8888/">http://localhost:8888/</a>
 
 <img src="/images/screenshots/fullapp-2.png" class="img-fluid mb-4">
 <img src="/images/screenshots/fullapp-1.png" class="img-fluid mb-4">
