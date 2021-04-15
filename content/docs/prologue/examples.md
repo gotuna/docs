@@ -26,7 +26,7 @@ cd gotuna
 go run examples/fullapp/cmd/main.go
 ```
 
-Once the app is compiles, visit <a target="_blank" href="http://localhost:8888/">http://localhost:8888/</a>
+Once the app is compiled, visit <a target="_blank" href="http://localhost:8888/">http://localhost:8888/</a> in your browser.
 
 <img src="/images/screenshots/fullapp-2.png" class="img-fluid mb-4">
 <img src="/images/screenshots/fullapp-1.png" class="img-fluid mb-4">
