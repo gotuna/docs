@@ -70,3 +70,14 @@ auth.Use(app.RedirectIfAuthenticated("/"))
 auth.Handle("/login", handlerLogin(app)).Methods(http.MethodGet, http.MethodPost)
 ```
 
+## Serving static files
+A special handler is provided by the framework to serve your static files 
+configured under `app.Static` with optional prefix `app.StaticPrefix`.
+
+You must also provide a handler to be used when the file is not found (404 page).
+
+```
+app.Router.PathPrefix(app.StaticPrefix).
+	Handler(http.StripPrefix(app.StaticPrefix, app.ServeFiles(handlerNotFound(app)))).
+	Methods(http.MethodGet)
+```

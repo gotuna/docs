@@ -113,7 +113,7 @@ The framework comes with several built-in helpers:
 - isGuest
 
 ## Template files
-Template files are passed in to the app's configuration using the `io/fs` package's `FS` interface.
+Template files are passed into the app's configuration using the `io/fs` package's `FS` interface.
 
 This means that you can use embed to embed all template files directly into the final binary.
 
