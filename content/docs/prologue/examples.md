@@ -18,6 +18,12 @@ GoTuna comes with few working examples.
 
 ## Running examples
 ```
+git clone https://github.com/gotuna/gotuna.git
+cd gotuna
 go run examples/fullapp/cmd/main.go
 ```
+
+<img src="/images/screenshots/fullapp-2.png" class="img-fluid mb-4">
+<img src="/images/screenshots/fullapp-1.png" class="img-fluid mb-4">
+
 
