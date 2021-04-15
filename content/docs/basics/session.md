@@ -34,3 +34,26 @@ app := gotuna.App{
 }
 ```
 
+## Flash messages
+Sometimes you may wish to store message or status update in the session for the next request. 
+Data stored in the session using the flash method will be available only in the subsequent request.
+
+```
+msg := "Welcome!"
+app.Session.Flash(w, r, gotuna.NewFlash(msg))
+
+app.Session.Flash(w, r, gotuna.FlashMessage{
+  Kind: "success",
+  Message: "Another info message",
+})
+```
+
+You can range over `.Flashes` to render this in your template:
+```
+{{range $e := .Flashes}}
+<div class="notification {{if $e.Kind}}is-{{$e.Kind}}{{end}}">
+  {{$e.Message}}
+</div>
+{{end}}
+```
+
