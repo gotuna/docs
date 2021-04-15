@@ -13,7 +13,7 @@ weight: 620
 toc: true
 ---
 
-Routing is performed using well known [gorilla/mux](https://github.com/gorilla/mux) package.
+GoTuna handles routing with famous [gorilla/mux](https://github.com/gorilla/mux) package.
 For more info on how to use the Gorilla router please [visit the official docs](https://github.com/gorilla/mux).
 
 ## Action handlers
