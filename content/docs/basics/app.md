@@ -14,7 +14,7 @@ toc: true
 ---
 
 
-App is the heart of every GoTuna application. 
+App is the central place for every GoTuna application. 
 This is where all the app's dependencies are configured.
 
 ```
