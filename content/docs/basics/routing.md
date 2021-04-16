@@ -13,11 +13,11 @@ weight: 620
 toc: true
 ---
 
-GoTuna handles routing with famous [gorilla/mux](https://github.com/gorilla/mux) package.
+GoTuna handles routing with the famous [gorilla/mux](https://github.com/gorilla/mux) package.
 For more info on how to use the Gorilla router please [visit the official docs](https://github.com/gorilla/mux).
 
 ## Action handlers
-For every route you should create a corresponding action handler.
+For every route, you should create a corresponding action handler.
 
 ```
 package main
