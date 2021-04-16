@@ -69,5 +69,5 @@ at this sample [mysql user provider](https://github.com/gotuna/mysqlusers).
 
 This is most common way to store users, but you can also keep your users in MongoDB
 or any other type of storage. You can also add as many fields to your users as 
-you need in your application, add methods to update or create new users.
+you need in your application, add methods to update, or create new users.
 
