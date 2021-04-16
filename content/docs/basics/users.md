@@ -13,7 +13,7 @@ weight: 710
 toc: true
 ---
 
-In order to use the session and other user-related features, 
+To use the session and other user-related features, 
 you must provide a way for the app to find and authenticate users.
 
 This is done by implementing two interfaces `gotuna.UserRepository` and `gotuna.User`.
@@ -67,7 +67,7 @@ To make your life easier, default inMemory user implementation is already provid
 To see how you can build your own, custom user providers, please take a look 
 at this sample [mysql user provider](https://github.com/gotuna/mysqlusers).
 
-This is most common way to store users, but you can also keep your users in MongoDB
+This is the most common way to store users, but you can also keep your users in MongoDB
 or any other type of storage. You can also add as many fields to your users as 
 you need in your application, add methods to update, or create new users.
 
