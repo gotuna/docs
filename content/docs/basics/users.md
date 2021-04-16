@@ -39,7 +39,7 @@ To make your life easier, default inMemory user implementation is already provid
 ```
 	// User1 is a sample user #1.
 	var User1 = gotuna.InMemoryUser{
-		UniqueID: "123",
+		ID: "123",
 		Email:    "john@example.com",
 		Name:     "John",
 		Password: "pass123",
@@ -47,7 +47,7 @@ To make your life easier, default inMemory user implementation is already provid
 
 	// User2 is a sample user #2.
 	var User2 = gotuna.InMemoryUser{
-		UniqueID: "456",
+		ID: "456",
 		Email:    "bob@example.com",
 		Name:     "Bob",
 		Password: "bobby5",
