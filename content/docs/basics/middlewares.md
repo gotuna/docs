@@ -13,9 +13,9 @@ weight: 700
 toc: true
 ---
 
-Middlewares are small pieces of code which take one request, do something with it,
+Middlewares are small pieces of code that take one request, do something with it,
 and pass it down to another middleware or the final handler.
-Some common use cases for middleware are request logging or header manipulation.
+Some common use-cases for middleware are request logging or header manipulation.
 All middlewares have the common gorilla signature `mux.MiddlewareFunc`
 
 ## Attaching middlewares
