@@ -26,7 +26,7 @@ func handlerLogin(app gotuna.App) http.Handler {
 }
 ```
 
-Here we have the `app.html` template file which is used as a main layout, and 
+Here we have the `app.html` template file which is used as the main layout, and 
 the `login.html` as an injected block component.
 ```
 // app.html
@@ -89,7 +89,7 @@ are using the `t` helper to translate the `Email` string.
 <label class="label">{{t "Email"}}</label>
 ```
 
-You can add your own custom helpers to the app using the `gotuna.ViewHelperFunc` signature.
+You can add your custom helpers to the app using the `gotuna.ViewHelperFunc` signature.
 
 ```
 // custom view helpers added to the app constructor
