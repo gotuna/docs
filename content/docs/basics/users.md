@@ -33,7 +33,7 @@ type UserRepository interface {
 ```
 
 
-## In memory user provider
+## In-memory user provider
 To make your life easier, default inMemory user implementation is already provided.
 
 ```
@@ -62,4 +62,12 @@ To make your life easier, default inMemory user implementation is already provid
 		UserRepository: userRepository,
 	}
 ```
+
+## MySQL user provider
+To see how you can build your own, custom user providers, please take a look 
+at this sample [mysql user provider](https://github.com/gotuna/mysqlusers).
+
+This is most common way to store users, but you can also keep your users in MongoDB
+or any other type of storage. You can also add as many fields to your users as 
+you need in your application, add methods to update or create new users.
 
