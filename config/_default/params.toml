@@ -3,8 +3,8 @@
 ## Homepage
 title = "GoTuna"
 titleSeparator = "-"
-titleAddition = "Progressive web framework written in Go"
-description = "GoTuna - progressive web framework written in Go"
+titleAddition = "Web framework for Go"
+description = "GoTuna - Web framework for Go"
 
 ## Open Graph + Twitter Cards
 images = ["gotuna-card.jpeg"]

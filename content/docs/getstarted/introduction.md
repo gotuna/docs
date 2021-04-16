@@ -1,6 +1,6 @@
 ---
 title: "Introduction"
-description: "GoTuna - progressive web framework written in go"
+description: "GoTuna - Web framework for Go"
 lead: ""
 date: 2020-10-06T08:48:57+00:00
 lastmod: 2020-10-06T08:48:57+00:00
