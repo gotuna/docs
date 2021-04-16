@@ -15,7 +15,7 @@ toc: true
 
 The framework comes with the basic templating engine which uses native `html/template` Go templates.
 
-## Using the templates
+## Using templates
 The templates are typically used inside the action handlers:
 
 ```

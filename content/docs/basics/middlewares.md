@@ -9,7 +9,7 @@ images: []
 menu: 
   docs:
     parent: "basics"
-weight: 720
+weight: 700
 toc: true
 ---
 
