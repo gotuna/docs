@@ -16,14 +16,14 @@ toc: true
 A session is a non-persistent, per-user data storage, which is created when the user is 
 logged in and destroyed when the user is logged out.
 
-Session are used to store flash messages, or any temporary user-specific data.
+The session is used to store flash messages or any temporary user-specific data.
 
 
 ## Configuration
 Before using the session you must configure the main app with a session driver,
-and provide unique secret session key.
+and provide a unique secret session key.
 
-Under the hood the framework uses [gorilla/sessions](https://github.com/gorilla/sessions)
+Under the hood, the framework uses [gorilla/sessions](https://github.com/gorilla/sessions)
 so you can choose one of many store implementations.
 
 ```
@@ -35,7 +35,7 @@ app := gotuna.App{
 ```
 
 ## Flash messages
-Sometimes you may wish to store message or status update in the session for the next request. 
+Sometimes you may wish to store a message or status update in the session for the next request. 
 Data stored in the session using the flash method will be available only in the subsequent request.
 
 ```
