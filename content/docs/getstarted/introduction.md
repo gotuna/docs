@@ -13,8 +13,6 @@ weight: 100
 toc: true
 ---
 
-{{< alert icon="💡" text="This project is still under heavy development and is not ready for production use." >}}
-
 ## Main Features
 - Router (gorilla)
 - Standard `http.Handler` interface
