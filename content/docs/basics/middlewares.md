@@ -23,7 +23,7 @@ All middlewares have the common gorilla signature `mux.MiddlewareFunc`
 Middlewares are attached to routes using ```app.Router.Use()```
 
 ```
-app.Router = mux.NewRouter()
+app.Router = gotuna.NewMuxRouter()
 
 app.Router.Handle("/", handlerHome(app))
 app.Router.Use(app.Logging())
@@ -38,4 +38,4 @@ The framework comes with several built-in middlewares:
 - Cors
 - Logging
 - Recoverer
-- StoreUserToContext
+- StoreToContext
