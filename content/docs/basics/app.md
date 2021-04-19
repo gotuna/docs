@@ -41,7 +41,6 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/gorilla/mux"
 	"github.com/gotuna/gotuna"
 )
 
