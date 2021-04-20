@@ -30,7 +30,7 @@ so you can choose one of many store implementations.
 key := os.Getenv("SESSION_KEY")
 
 app := gotuna.App{
-	Session: gotuna.NewSession(sessions.NewCookieStore([]byte(key))),
+	Session: gotuna.NewSession(sessions.NewCookieStore([]byte(key)), "app_session"),
 }
 ```
 
