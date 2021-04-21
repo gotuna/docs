@@ -83,6 +83,11 @@ fmt.Println(user.Name, user.Email)
 
 ```
 
+In templates, if `StoreToContext` middleware is attached:
+```
+<h2>Hello {{currentUser.Name}}<h2>
+```
+
 ## MySQL user provider
 To see how you can build your own, custom user providers, please take a look 
 at this sample [mysql user provider](https://github.com/gotuna/mysqlusers).
