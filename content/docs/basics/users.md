@@ -68,17 +68,27 @@ You can get your concrete user struct using explicit conversion.
 
 With `UserRepository` interface:
 ```
-raw, _ := app.UserRepository.GetUserByID("123")
+raw, err := app.UserRepository.GetUserByID("123")
+
+if err != nil {
+	panic("cannot find this user")
+}
 
 user := raw.(gotuna.InMemoryUser)
+
 fmt.Println(user.Name, user.Email)
 ```
 
 Using the request context, if `StoreToContext` middleware is attached:
 ```
-raw, _ := gotuna.GetUserFromContext(r.Context())
+raw, err := gotuna.GetUserFromContext(r.Context())
+
+if err != nil {
+	panic("user is not authenticated")
+}
 
 user := raw.(gotuna.InMemoryUser)
+
 fmt.Println(user.Name, user.Email)
 
 ```
