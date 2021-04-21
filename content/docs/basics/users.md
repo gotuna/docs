@@ -74,7 +74,7 @@ user := raw.(gotuna.InMemoryUser)
 fmt.Println(user.Name, user.Email)
 ```
 
-Using the `StoreToContext` middleware:
+Using the request context, if `StoreToContext` middleware is attached:
 ```
 raw, _ := gotuna.GetUserFromContext(r.Context())
 
