@@ -63,6 +63,26 @@ To make your life easier, default inMemory user implementation is already provid
 	}
 ```
 
+## Getting the user object
+You can get your concrete user struct using explicit conversion.
+
+With `UserRepository` interface:
+```
+raw, _ := app.UserRepository.GetUserByID("123")
+
+user := raw.(gotuna.InMemoryUser)
+fmt.Println(user.Name, user.Email)
+```
+
+Using the `StoreToContext` middleware:
+```
+raw, _ := gotuna.GetUserFromContext(r.Context())
+
+user := raw.(gotuna.InMemoryUser)
+fmt.Println(user.Name, user.Email)
+
+```
+
 ## MySQL user provider
 To see how you can build your own, custom user providers, please take a look 
 at this sample [mysql user provider](https://github.com/gotuna/mysqlusers).
