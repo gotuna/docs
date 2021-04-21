@@ -39,3 +39,42 @@ The framework comes with several built-in middlewares:
 - Logging
 - Recoverer
 - StoreToContext
+
+### Authenticate
+This middleware can be used to guard routes from non-authenticated users.
+You must provide a destination for guests to be redirected.
+
+### RedirectIfAuthenticated
+The exact opposite of Authenticate middleware. Authenticated users will
+be redirected to the provided destination.
+
+### Cors
+Cross-Origin Resource Sharing middleware will respond to OPTIONS requests 
+with appropriate headers and 204 status.
+
+### Logging
+Log every requests to the app's Logger.
+
+### Recoverer
+This middleware is used to recover the app from panics, to log the incident,
+and to redirect user to the error page.
+
+### StoreToContext
+This middleware will add common values to the request context for further use. 
+
+The request context will be used to store:
+- current authenticated user object.
+- all of the parameters for the current request, including query parameters, 
+ route parameters, and submitted form values.
+
+Getting the user object:
+```
+raw, _ := gotuna.GetUserFromContext(r.Context())
+user := raw.(gotuna.InMemoryUser)
+```
+
+Getting route parameters or form values:
+```
+color := gotuna.GetParam(r.Context(), "color")
+```
+
