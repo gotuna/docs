@@ -15,8 +15,10 @@ toc: true
 
 Logger is a standard `log.Logger` implementations that you must supply to the app.
 
-The logging middleware will use this interface to log every request.
 
+{{< alert icon="💡" text="The logging middleware will use this interface to log every request." >}}
+
+## Stdout logger
 ```
 app := gotuna.App{
 	Logger: log.New(os.Stdout, "", 0),
