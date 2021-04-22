@@ -35,9 +35,9 @@ app := gotuna.App{
 ```
 
 ## Using the session
-First, you need to setup a session for the authenticated user.  After successful 
-authentication, your UserRepository will return a User object which you can 
-use to get the user ID and initialize the session:
+First, you need to initialize a session for the authenticated user. 
+After successful authentication, your `UserRepository` will return a `User` object 
+which you can use to get the user ID and initialize the session:
 ```
 func handlerLogin(app App) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
@@ -47,7 +47,7 @@ func handlerLogin(app App) http.Handler {
 }
 ```
 
-You can now store, retrive and delete string values from the session:
+You can now store, retrive and delete string values in the user's session:
 ```
 func handlerHome(app App) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
