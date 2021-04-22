@@ -79,7 +79,7 @@ user := raw.(gotuna.InMemoryUser)
 fmt.Println(user.Name, user.Email)
 ```
 
-Using the request context, if `StoreToContext` middleware is attached:
+Using the request context, if `StoreUserToContext` middleware is attached:
 ```
 raw, err := gotuna.GetUserFromContext(r.Context())
 
@@ -93,7 +93,7 @@ fmt.Println(user.Name, user.Email)
 
 ```
 
-In templates, if `StoreToContext` middleware is attached:
+In templates, if `StoreUserToContext` middleware is attached:
 ```
 <h2>Hello {{currentUser.Name}}<h2>
 ```

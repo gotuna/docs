@@ -34,7 +34,8 @@ The framework comes with several built-in middlewares:
 
 - Authenticate
 - RedirectIfAuthenticated
-- StoreToContext (required for some features)
+- StoreParamsToContext (required for some features)
+- StoreUserToContext (required for some features)
 - Cors
 - Logging
 - Recoverer (recommended)
@@ -47,9 +48,13 @@ You must provide a destination for guests to be redirected.
 The exact opposite of Authenticate middleware. Authenticated users will
 be redirected to the provided destination.
 
-### StoreToContext
-This middleware will add common values to the request context for further use. 
-It is highly recommended to use and attach this middleware to all routes.
+### StoreParamsToContext
+This middleware will add all parameters from the current request to the context, 
+this includes query, form, and route params
+
+### StoreUserToContext
+This middleware will add the current logged in  user object (if any) to the 
+request context for further use.
 
 The request context will be used to store:
 - current authenticated user object.

@@ -61,7 +61,8 @@ app.Router = gotuna.NewMuxRouter()
 
 // middlewares for all routes
 app.Router.Use(app.Logging())
-app.Router.Use(app.StoreToContext())
+app.Router.Use(app.StoreParamsToContext())
+app.Router.Use(app.StoreUserToContext())
 
 // for logged in users
 user := app.Router.NewRoute().Subrouter()
