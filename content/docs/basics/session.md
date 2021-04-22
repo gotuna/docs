@@ -34,9 +34,29 @@ app := gotuna.App{
 }
 ```
 
+## Using the session
+You can store, retrive and delete string values from the session:
+```
+func handlerHome(app App) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		app.Session.Put(w, r, "color", "red")
+		app.Session.Get(r, "color")
+		app.Session.Delete(w, r, "color")
+	})
+}
+```
+If you wish to log out the current user, you can simply destroy this session:
+```
+func handlerLogout(app App) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		app.Session.Destroy(w, r)
+	})
+}
+```
+
 ## Flash messages
 Sometimes you may wish to store a message or status update in the session for the next request. 
-Data stored in the session using the flash method will be available only in the subsequent request.
+Data stored in the session using the flash method will be available in the first subsequent request.
 
 ```
 msg := "Welcome!"
@@ -57,3 +77,22 @@ You can range over `.Flashes` to render this in your template:
 {{end}}
 ```
 
+## Storing non-string values
+If you need to store your custom struct into the session, you can use 
+`TypeToString` and `TypeFromString` helper functions:
+```
+type myType struct {
+	Str string
+	Bl  bool
+}
+
+val := myType{
+	Str: "test string",
+	Bl:  true,
+}
+
+s, err := gotuna.TypeToString(val)
+
+r := myType{}
+err = gotuna.TypeFromString(s, &r)
+```
