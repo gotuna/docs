@@ -64,7 +64,7 @@ To make your life easier, default inMemory user implementation is already provid
 ```
 
 ## Getting the user object
-You can get your concrete user struct using explicit conversion.
+Using explicit conversion, you can get your concrete user directly from the app.
 
 With `UserRepository` interface:
 ```
@@ -96,6 +96,11 @@ fmt.Println(user.Name, user.Email)
 In templates, if `StoreToContext` middleware is attached:
 ```
 <h2>Hello {{currentUser.Name}}<h2>
+```
+
+Using custom method from your specific repository:
+```
+user := app.UserRepository.(*YourCustomRepo).GetUserByToken(token)
 ```
 
 ## MySQL user provider
