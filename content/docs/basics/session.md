@@ -41,7 +41,10 @@ which you can use to get the user ID and initialize the session:
 ```
 func handlerLogin(app App) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		user, _ := app.UserRepository.Authenticate(w, r)
+		user, err := app.UserRepository.Authenticate(w, r)
+		if err != nil {
+			return // wrong, try again
+		}
 		app.Session.SetUserID(w, r, user.GetID())
 	})
 }
