@@ -34,7 +34,7 @@ The framework comes with several built-in middlewares:
 
 - Authenticate
 - RedirectIfAuthenticated
-- StoreParamsToContext (required for some features)
+- StoreParamsToContext
 - StoreUserToContext (required for some features)
 - Cors
 - Logging
@@ -52,7 +52,7 @@ be redirected to the provided destination.
 This middleware will add all parameters from the current request to the context, 
 this includes query, form, and route params
 
-Getting route parameters or form values:
+With this middleware attached, you can now get route parameters or form values with:
 ```
 color := gotuna.GetParam(r.Context(), "color")
 ```
