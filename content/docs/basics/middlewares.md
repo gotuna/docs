@@ -52,24 +52,19 @@ be redirected to the provided destination.
 This middleware will add all parameters from the current request to the context, 
 this includes query, form, and route params
 
+Getting route parameters or form values:
+```
+color := gotuna.GetParam(r.Context(), "color")
+```
+
 ### StoreUserToContext
 This middleware will add the current logged in  user object (if any) to the 
 request context for further use.
-
-The request context will be used to store:
-- current authenticated user object.
-- all of the parameters for the current request, including query parameters, 
- route parameters, and submitted form values.
 
 Getting the user object:
 ```
 raw, _ := gotuna.GetUserFromContext(r.Context())
 user := raw.(gotuna.InMemoryUser)
-```
-
-Getting route parameters or form values:
-```
-color := gotuna.GetParam(r.Context(), "color")
 ```
 
 ### Cors
