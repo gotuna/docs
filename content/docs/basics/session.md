@@ -35,7 +35,19 @@ app := gotuna.App{
 ```
 
 ## Using the session
-You can store, retrive and delete string values from the session:
+First, you need to setup a session for the authenticated user.  After successful 
+authentication, your UserRepository will return a User object which you can 
+use to get the user ID and initialize the session:
+```
+func handlerLogin(app App) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		user, _ := app.UserRepository.Authenticate(w, r)
+		app.Session.SetUserID(w, r, user.GetID())
+	})
+}
+```
+
+You can now store, retrive and delete string values from the session:
 ```
 func handlerHome(app App) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
