@@ -15,6 +15,15 @@ toc: true
 
 The framework comes with the basic templating engine which uses native `html/template` Go templates.
 
+Before you start rendering anything, you must configure a view filesystem. 
+For example, you could store all your template files into the `views/` sub-directory:
+
+```
+app := gotuna.App{
+	ViewFiles: os.DirFS("./views"),
+}
+```
+
 ## Using templates
 The templates are typically used inside the action handlers:
 
