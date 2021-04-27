@@ -127,7 +127,7 @@ Template files are passed into the app's configuration using the `io/fs` package
 
 This means that you can use both `os.DirFS` or `go:embed` to pack all your template files directly into the final binary.
 
-Simplified example showing the structure of an app with templates:
+Simplified example showing the structure of an app with embeded templates:
 
 
 ```
@@ -140,22 +140,6 @@ Simplified example showing the structure of an app with templates:
 ```
 
 ```
-// main.go
-
-...
-// use embeded files
-app := gotuna.App{
-	ViewFiles: views.EmbededViews,
-}
-
-// ...or use operating system files
-app := gotuna.App{
-	ViewFiles: os.DirFS("./views"),
-}
-...
-```
-
-```
 // views/views.go
 
 package views
@@ -164,5 +148,15 @@ import "embed"
 
 //go:embed *
 var EmbededViews embed.FS
+```
+
+```
+// main.go
+
+// use embeded files
+app := gotuna.App{
+	ViewFiles: views.EmbededViews,
+}
+
 ```
 
