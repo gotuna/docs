@@ -34,7 +34,7 @@ type App struct {
 ## Hello world
 To illustrate a simple app, we can create a hello world:
 
-```
+```gi
 package main
 
 import (
