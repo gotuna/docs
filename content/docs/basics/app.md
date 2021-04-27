@@ -17,7 +17,7 @@ toc: true
 The `App` is the central place for every GoTuna application. 
 This is where all the app's dependencies are configured.
 
-```
+```go
 type App struct {
 	Logger         *log.Logger
 	Router         *mux.Router
