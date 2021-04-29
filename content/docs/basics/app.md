@@ -32,7 +32,7 @@ type App struct {
 ```
 
 ## Hello world
-To illustrate a simple app, we can create a hello world:
+To illustrate a simple app, we can create a hello world `main.go`:
 
 ```
 package main
@@ -56,4 +56,9 @@ func main() {
 	fmt.Println("Running on http://localhost:8888")
 	http.ListenAndServe(":8888", app.Router)
 }
+```
+
+Run this app and visit http://localhost:8888 in your browser:
+```
+go run main.go
 ```
