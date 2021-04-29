@@ -13,7 +13,7 @@ weight: 130
 toc: true
 ---
 
-GoTuna comes with few working examples.
+GoTuna comes with an example app.
 
 {{< alert icon="💡" text="Make sure you have Go >= 1.16 installed." >}}
 
