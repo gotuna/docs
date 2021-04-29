@@ -45,8 +45,10 @@ import (
 )
 
 func main() {
-	app := gotuna.App{}
-	app.Router = gotuna.NewMuxRouter()
+	app := gotuna.App{
+		Router: gotuna.NewMuxRouter(),
+	}
+
 	app.Router.Handle("/", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Hello World!")
 	}))
