@@ -22,8 +22,6 @@ All middlewares have the common `MiddlewareFunc` signature.
 Middlewares are attached to routes using ```app.Router.Use()```
 
 ```
-app.Router = gotuna.NewMuxRouter()
-
 app.Router.Handle("/", handlerHome(app))
 app.Router.Use(app.Logging())
 app.Router.Use(myCustomMiddleware())

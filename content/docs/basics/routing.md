@@ -30,8 +30,10 @@ import (
 )
 
 func main() {
-	app := gotuna.App{}
-	app.Router = gotuna.NewMuxRouter()
+	app := gotuna.App{
+		Router: gotuna.NewMuxRouter(),
+	}
+
 	app.Router.Handle("/", handlerHome(app))
 	app.Router.Handle("/login", handlerLogin(app)).Methods(http.MethodGet, http.MethodPost)
 
@@ -57,8 +59,6 @@ You can group several routes that share the same functionality. This is called "
 
 
 ```
-app.Router = gotuna.NewMuxRouter()
-
 // middlewares for all routes
 app.Router.Use(app.Logging())
 app.Router.Use(app.StoreParamsToContext())
