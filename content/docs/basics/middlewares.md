@@ -88,10 +88,22 @@ user := raw.(gotuna.InMemoryUser)
 Cross-Origin Resource Sharing middleware will respond to OPTIONS requests 
 with appropriate headers and 204 status.
 
+```
+app.Router.Use(app.Cors())
+```
+
 ### Logging
 Log every requests to the app's Logger.
+
+```
+app.Router.Use(app.Logging())
+```
 
 ### Recoverer
 This middleware is used to recover the app from panics, to log the incident,
 and to redirect user to the error page.
+
+```
+app.Router.Use(app.Recoverer("/error"))
+```
 
