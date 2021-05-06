@@ -73,7 +73,6 @@ color := gotuna.GetParam(r.Context(), "color")
 This middleware will add the current logged in  user object (if any) to the 
 request context for further use.
 
-Getting the user object:
 ```
 // attach middleware
 app.Router.Use(app.StoreUserToContext())
