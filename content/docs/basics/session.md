@@ -29,8 +29,12 @@ so you can choose one of many store implementations.
 ```
 key := os.Getenv("SESSION_KEY")
 
+cookieStore := sessions.NewCookieStore([]byte(keyPairs))
+cookieStore.Options.HttpOnly = true         // more secure
+cookieStore.Options.MaxAge = 30 * 24 * 3600 // expire in one month
+
 app := gotuna.App{
-	Session: gotuna.NewSession(sessions.NewCookieStore([]byte(key)), "app_session"),
+	Session: gotuna.NewSession(cookieStore, "app_session"),
 }
 ```
 
