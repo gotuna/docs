@@ -52,6 +52,12 @@ this includes query, form, and route params
 
 With this middleware attached, you can now get route parameters or form values with:
 ```
+// attach middleware
+app.Router.Use(app.StoreParamsToContext())
+
+...
+
+// use it in handlers
 color := gotuna.GetParam(r.Context(), "color")
 ```
 
@@ -61,6 +67,12 @@ request context for further use.
 
 Getting the user object:
 ```
+// attach middleware
+app.Router.Use(app.StoreUserToContext())
+
+...
+
+// use it in handlers
 raw, _ := gotuna.GetUserFromContext(r.Context())
 user := raw.(gotuna.InMemoryUser)
 ```
