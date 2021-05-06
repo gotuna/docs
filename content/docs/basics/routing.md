@@ -85,9 +85,9 @@ user.Handle("/profile", handlerProfile(app)).Methods(http.MethodGet, http.Method
 user.Handle("/logout", handlerLogout(app)).Methods(http.MethodPost)
 
 // for guests
-auth := app.Router.NewRoute().Subrouter()
-auth.Use(app.RedirectIfAuthenticated("/"))
-auth.Handle("/login", handlerLogin(app)).Methods(http.MethodGet, http.MethodPost)
+guests := app.Router.NewRoute().Subrouter()
+guests.Use(app.RedirectIfAuthenticated("/"))
+guests.Handle("/login", handlerLogin(app)).Methods(http.MethodGet, http.MethodPost)
 ```
 
 ## Serving static files
