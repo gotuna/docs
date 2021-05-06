@@ -42,22 +42,30 @@ The framework comes with several built-in middlewares:
 This middleware can be used to guard routes from non-authenticated users.
 You must provide a destination for guests to be redirected.
 
+```
+// attach middleware, redirect guests to /login route
+app.Router.Use(app.Authenticate("/login"))
+```
+
 ### RedirectIfAuthenticated
 The exact opposite of Authenticate middleware. Authenticated users will
 be redirected to the provided destination.
 
+```
+app.Router.Use(app.RedirectIfAuthenticated("/"))
+```
+
 ### StoreParamsToContext
 This middleware will add all parameters from the current request to the context, 
-this includes query, form, and route params
+this includes query, form, and route params.
 
-With this middleware attached, you can now get route parameters or form values with:
 ```
 // attach middleware
 app.Router.Use(app.StoreParamsToContext())
 
 ...
 
-// use it in handlers
+// use it in handlers, e.g. http://example.com/buycar?color=red
 color := gotuna.GetParam(r.Context(), "color")
 ```
 
