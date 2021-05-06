@@ -36,6 +36,7 @@ func main() {
 
 	app.Router.Handle("/", handlerHome(app))
 	app.Router.Handle("/login", handlerLogin(app)).Methods(http.MethodGet, http.MethodPost)
+	app.Router.Handle("/api/shapes", handlerShapes(app))
 
 	fmt.Println("Running on http://localhost:8888")
 	http.ListenAndServe(":8888", app.Router)
@@ -50,6 +51,18 @@ func handlerHome(app gotuna.App) http.Handler {
 func handlerLogin(app gotuna.App) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Login form...")
+	})
+}
+
+func handlerShapes(app gotuna.App) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		cars := []string{
+			"Circle",
+			"Square",
+			"Triangle",
+		}
+
+		json.NewEncoder(w).Encode(cars)
 	})
 }
 ```
