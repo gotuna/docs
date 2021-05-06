@@ -19,7 +19,7 @@ All middlewares have the common `MiddlewareFunc` signature.
 
 ## Attaching middlewares
 
-Middlewares are attached to routes using ```app.Router.Use()```
+Middlewares are attached to routes with ```app.Router.Use()```
 
 ```
 app.Router.Handle("/", handlerHome(app))
