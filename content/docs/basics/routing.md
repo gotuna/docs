@@ -99,7 +99,7 @@ You can provide a custom handler to be used when the file is not found (404 page
 ```
 app.Static = os.DirFS("./static")
 
-// this route is usually placed at the bottom (catchall)
+// this route is usually placed at the bottom (catch-all)
 app.Router.PathPrefix(app.StaticPrefix).
 	Handler(http.StripPrefix(app.StaticPrefix, app.ServeFiles(http.NotFoundHandler()))).
 	Methods(http.MethodGet)
