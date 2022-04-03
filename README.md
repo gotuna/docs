@@ -1,6 +1,6 @@
 ## GoTuna documentation website
 
-[https://www.gotuna.org/](https://www.gotuna.org/)
+[https://gotuna.netlify.app](https://gotuna.netlify.app)
 
 Based on [Doks — Modern Documentation Theme](https://getdoks.org/)
 

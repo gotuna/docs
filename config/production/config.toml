@@ -1,2 +1,2 @@
-baseurl = "https://www.gotuna.org/"
+baseurl = "https://gotuna.netlify.app/"
 canonifyURLs = true

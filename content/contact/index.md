@@ -7,4 +7,4 @@ draft: true
 images: []
 ---
 
-{{< email user="info" domain="gotuna.org" >}}
+{{< email user="info" domain="interactive32.com" >}}
