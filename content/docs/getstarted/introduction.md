@@ -30,7 +30,7 @@ toc: true
 - Database agnostic
 
 ## Requirements
-- Make sure you have Go >= 1.16 installed
+- Make sure you have Go >= 1.23 installed
 
 ## Testing
 ```

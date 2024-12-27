@@ -15,7 +15,7 @@ toc: true
 
 GoTuna comes with an example app.
 
-{{< alert icon="💡" text="Make sure you have Go >= 1.16 installed." >}}
+{{< alert icon="💡" text="Make sure you have Go >= 1.23 installed." >}}
 
 ## Running example apps
 
