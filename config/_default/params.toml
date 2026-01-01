@@ -36,7 +36,7 @@ portraitPhotoWidths = [800, 700, 600, 500]
 lqipWidth = "20x"
 
 # Footer
-footer = "Powered by <a href=\"https://interactive32.com\">Interactive32</a>"
+footer = "Powered by <a href=\"https://interactive32.com\">Interactive32</a> &copy; 2008 - 2026"
 
 # Alert
 alert = false
